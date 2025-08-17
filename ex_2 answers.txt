@@ -1,0 +1,10 @@
+1. What happens when the number of hidden nodes increase?
+
+When the number of units is very few the network is too basic → the decision boundary is nearly linear/smooth and training accuracy is not that good.
+A moderate size leads to capacity equaling the nonlinearity of the data that accuracy usually improves significantly and the boundaries will be properly curved.
+Using large numbers of units (e.g. 20-50) the model will be able to develop highly complex boundaries: it can easily develop training accuracy that is very high, but it may overfit (great on training, not necessarily better on unseen data) and can be more sensitive to initialization/learning rate problems.
+
+2. Can you explain the pattern of the accuracy when the hidden nodes increase?
+
+Rise: Going from 1 to 5 hidden units reduces bias, so accuracy improves sharply as the model can capture the dataset’s nonlinear structure.
+Plateau / fluctuations: Beyond 5 to 20 units, gains taper off. Accuracy may still inch up on training data, but improvements are smaller and sometimes unstable run-to-run due to higher variance. At very large sizes (e.g., 50), expect very high training accuracy but increased risk of overfitting unless you add regularization/early stopping.
